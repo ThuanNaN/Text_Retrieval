@@ -106,12 +106,4 @@ def vsm(path_docs, path_query, topk):
     rs +=1
 
     return rs
-    # res = preprocess_res("./TEST/RES")
-    # ap = AP(rs, res).mean()
-    # print(ap)
 
-
-
-# path_docs = "./Cranfield"
-# path_query = "./TEST/query.txt"
-# vsm(path_docs,path_query )

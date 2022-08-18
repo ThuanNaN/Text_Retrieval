@@ -22,6 +22,7 @@ class Dataset:
         Create `Dataset` object from document folder.
     """
     def __init__(self, doc_root, isPreprocessing=True) -> None:
+
         doc_filepaths = sorted(os.listdir(doc_root), key=lambda path:int(path.split('.')[0]))
         self.docs = []
      

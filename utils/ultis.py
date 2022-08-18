@@ -37,8 +37,14 @@ def cosine_sim(q_vec, c_vec, topk=10):
     return topk_ans, cos_sim
 
 def save_result(path_folder, data):
+    
+    isExist = os.path.exists(path_folder)
+    if not isExist:
+        os.makedirs(path_folder)
+
     for i in range(len(data)):
         path_save = os.path.join(os.getcwd(),path_folder.split("/")[-1],str(i+1)+".txt")
+        
         with open(path_save,"w") as f:
             for j in data[i]:
                 s = str(i+1)+" "+ str(j) + "\n"
